@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/little-lemon/static/css/main.f8be84f4.css",
+    "main.js": "/little-lemon/static/js/main.519389f8.js",
+    "static/js/453.e9e90eab.chunk.js": "/little-lemon/static/js/453.e9e90eab.chunk.js",
+    "static/media/hero.png": "/little-lemon/static/media/hero.23c6a68dfc66d6f8c276.png",
+    "static/media/bruchetta.png": "/little-lemon/static/media/bruchetta.73dacfca7d1297738597.png",
+    "static/media/catherina.jpg": "/little-lemon/static/media/catherina.c9d3e878d72526092e0f.jpg",
+    "static/media/about2.jpg": "/little-lemon/static/media/about2.4b4c2d26b514db32e8fc.jpg",
+    "static/media/thomas.jpg": "/little-lemon/static/media/thomas.f34c4712e8d10ce1f15f.jpg",
+    "static/media/yohanes.jpg": "/little-lemon/static/media/yohanes.00bc415c3e9ae393b486.jpg",
+    "static/media/about.jpg": "/little-lemon/static/media/about.324d0f99bdf19400a0f7.jpg",
+    "static/media/salad.png": "/little-lemon/static/media/salad.24edf7c069c162ddc504.png",
+    "static/media/instagram.png": "/little-lemon/static/media/instagram.fc7a24a44728627e7dce.png",
+    "static/media/facebook.png": "/little-lemon/static/media/facebook.6ce915b9e66d266f06b0.png",
+    "static/media/john.webp": "/little-lemon/static/media/john.3d910a7fb556625effbb.webp",
+    "static/media/delivery.png": "/little-lemon/static/media/delivery.2476f023cf96830d9f75.png",
+    "static/media/logo.png": "/little-lemon/static/media/logo.2e94b28ba1dee7e15b41.png",
+    "index.html": "/little-lemon/index.html",
+    "main.f8be84f4.css.map": "/little-lemon/static/css/main.f8be84f4.css.map",
+    "main.519389f8.js.map": "/little-lemon/static/js/main.519389f8.js.map",
+    "453.e9e90eab.chunk.js.map": "/little-lemon/static/js/453.e9e90eab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8be84f4.css",
+    "static/js/main.519389f8.js"
+  ]
+}
