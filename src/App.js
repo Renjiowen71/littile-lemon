@@ -10,6 +10,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/little-lemon" element={<Home />} />
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
       <Footer/>
