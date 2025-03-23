@@ -9,7 +9,7 @@ function Hero(){
             <p className="lead-text">We are a family owned  Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
             <Link to="/reservation" className='button'>Reserve a Table</Link>
         </article>
-        <img src={hero}/>
+        <img src={hero} alt='Hero'/>
     </>
     )
 }

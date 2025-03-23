@@ -4,7 +4,7 @@ import './Card.css';
 function SpecialsCard(props){
     return(
         <Link to="/order" className="card">
-            <img src={props.item.img}/>
+            <img src={props.item.img} alt="Food"/>
             <section className="card-title">
                 <span className="food-name">{props.item.name}</span>
                 <span className="food-price">${props.item.price.toFixed(2)}</span>
@@ -15,7 +15,7 @@ function SpecialsCard(props){
             <section className="card-footer">
                 <span className="card-link">
                     Order a delivery
-                    <img src={delivery}/>
+                    <img src={delivery} alt="Delivery Icon"/>
                 </span>
             </section>
         </Link>

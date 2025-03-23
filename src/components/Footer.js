@@ -5,7 +5,7 @@ import Nav from "./Utility/Nav";
 function Footer() {
   return (
     <footer>
-      <img src={logo}/>
+      <img src={logo} alt='Logo'/>
       <section className='text-section'>
         <span className='header'>Doormat Navigation</span>
         <Nav/>
@@ -21,8 +21,8 @@ function Footer() {
       <section className='text-section'>
         <span className='header'>Social Media Link</span>
         <ul>
-          <li><a href='https://instagram.com'><img src={insta}/>@LittleLemon</a></li>
-          <li><a href='https://facebook.com'><img src={facebook}/>LittleLemon</a></li>
+          <li><a href='https://instagram.com'><img src={insta} alt='Insta Icon'/>@LittleLemon</a></li>
+          <li><a href='https://facebook.com'><img src={facebook} alt='Facebook Icon'/>LittleLemon</a></li>
         </ul>
       </section>
     </footer>

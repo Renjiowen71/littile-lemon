@@ -29,7 +29,7 @@ async function Fetch(url){
             price: 5.00
         }
     ];
-    if(url=="specialsUrl") return specialsData;
+    if(url==="specialsUrl") return specialsData;
 
     const testimonialsData = [
         {
@@ -58,7 +58,7 @@ async function Fetch(url){
             rating: 4
         },
     ];
-    if(url=="testimonialsUrl") return testimonialsData;
+    if(url==="testimonialsUrl") return testimonialsData;
 
     try {
         const response = await fetch(url);
