@@ -1,0 +1,12 @@
+:root {
+  --primary-colorGreen: #495E57;
+  --primary-colorYellow: #F4CE14;
+  --secondary-colorWhite: #EDEFEE;
+  --secondary-colorBlack: #333333;
+  --secondary-colorCream: #FBDABB;
+  --secondary-colorOrange: #EE9972;
+}
+
+body{
+  margin:0;
+}
