@@ -29,7 +29,8 @@ function Carousel() {
     <div className="carousel-container">
         {items.length > 3 && (
                 <button className="carousel-button left" onClick={prevItems}>
-                &#8592;
+                {'<'}
+                {/* &#8592; */}
             </button>
         )}
 
@@ -58,7 +59,8 @@ function Carousel() {
         </div>
 
         <button className="carousel-button right" onClick={nextItems}>
-            &#8594;
+            {'>'}
+            {/* &#8594; */}
         </button>
     </div>
   );
