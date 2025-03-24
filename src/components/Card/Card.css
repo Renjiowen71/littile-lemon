@@ -3,6 +3,7 @@
     padding-right: 0;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 
@@ -13,8 +14,8 @@
     border-radius: 16px;
     overflow: hidden;
     width: 30%;
-    min-width: 250px;
-    height: 450px;
+    min-width: 220px;
+    min-height: 475px;
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
@@ -25,10 +26,13 @@
         padding-right:10%;
     }
 
-    img {
+    aside{
         width: 100%;
-        height: 200px;
-        object-fit: cover;
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
     }
 
     .card-title {
@@ -43,6 +47,9 @@
         font-size:24px;
         font-weight: bold;
         color: var(--secondary-colorBlack);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .food-price {
@@ -59,6 +66,12 @@
         font-family: 'Karla';
         font-size: 16px;
         color: var(--primary-colorGreen);
+        overflow: auto;
+        height: 100px;
+        scrollbar-width: none;
+    }
+    .food-desc::-webkit-scrollbar {
+        display: none;
     }
 
     .card-footer {
@@ -75,7 +88,6 @@
         font-family: 'Karla';
         font-size: 16px;
         font-weight: bold;
-        margin-top: 16px;
         white-space: nowrap;
         transition: color 0.3s ease;
     }

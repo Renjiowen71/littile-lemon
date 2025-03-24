@@ -15,7 +15,7 @@ function SpecialsCardHolder() {
     }, []);
 
     return (
-        <section className="card-holder">
+        <section className="card-holder" >
             {items.map(item => (
                 <SpecialsCard key={item.id} item={item} />
             ))}

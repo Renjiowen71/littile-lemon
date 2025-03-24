@@ -2,9 +2,10 @@ import About from './Home/About';
 import Hero from './Home/Hero'
 import Specials from './Home/Specials'
 import Testimonials from './Home/Testimonials';
+import './Home.css';
 function Home() {
   return (
-    <div className="container">
+    <>
       <section className='hero'>
         <Hero/>
       </section>
@@ -14,10 +15,10 @@ function Home() {
       <section className='testimonials'>
         <Testimonials/>
       </section>
-      <section className='about'>
+      <section id='about' className='about'>
         <About/>
       </section>
-    </div>
+    </>
   );
 }
 
