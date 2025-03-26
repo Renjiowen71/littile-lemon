@@ -2,9 +2,10 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 import Header from './components/Header';
-import Home from './components/Page/Home';
+import Home from './components/page/Home';
 import Footer from './components/Footer';
-import Menu from './components/Page/Menu';
+import Menu from './components/page/Menu';
+import Reservation from './components/page/Reservation';
 
 function App() {
   return (
@@ -31,14 +32,15 @@ function AppWithScroll() {
   return (
     <>
       <Header />
-      <div className="container">
+      <main className="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/little-lemon" element={<Home />} />
           <Route path="/menu" element={<Menu/>} />
+          <Route path="/reservation" element={<Reservation />} />
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </>
   );

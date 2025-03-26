@@ -1,7 +1,7 @@
-import About from './Home/About';
-import Hero from './Home/Hero'
-import Specials from './Home/Specials'
-import Testimonials from './Home/Testimonials';
+import About from './home/About';
+import Hero from './home/Hero'
+import Specials from './home/Specials'
+import Testimonials from './home/Testimonials';
 import './Home.css';
 function Home() {
   return (

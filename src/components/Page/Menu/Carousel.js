@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import SpecialsCard from "../../Card/SpecialsCard"; // Ensure this is the correct import for your card
-import Fetch from "../../Utility/Fetch"; // Ensure this is the correct path to your Fetch function
+import SpecialsCard from "../../card/SpecialsCard"; // Ensure this is the correct import for your card
+import Fetch from "../../utility/Fetch"; // Ensure this is the correct path to your Fetch function
 import "./Carousel.css"; // Add the corresponding CSS
 
 function Carousel() {

@@ -1,7 +1,7 @@
 import logo from '../assets/footer.png'
 import insta from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
-import Nav from "./Utility/Nav";
+import Nav from "./utility/Nav";
 function Footer() {
   return (
     <footer>

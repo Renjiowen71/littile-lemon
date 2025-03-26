@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SpecialsCardHolder from "../../Card/SpecialsCardHolder";
+import SpecialsCardHolder from "../../card/SpecialsCardHolder";
 function Specials(){
     return(
         <>

@@ -1,4 +1,4 @@
-import Nav from './Utility/Nav';
+import Nav from './utility/Nav';
 import logo from '../assets/logo.png';
 function Header() {
   return (

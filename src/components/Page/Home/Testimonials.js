@@ -1,4 +1,4 @@
-import TestiCardHolder from "../../Card/TestiCardHolder";
+import TestiCardHolder from "../../card/TestiCardHolder";
 function Testimonials(){
     return(
         <>

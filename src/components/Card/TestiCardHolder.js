@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Fetch from '../Utility/Fetch'; // Assuming Fetch is the fetch utility
+import Fetch from '../utility/Fetch'; // Assuming Fetch is the fetch utility
 import TestiCard from "./TestiCard";
 import "./Card.css";
 
