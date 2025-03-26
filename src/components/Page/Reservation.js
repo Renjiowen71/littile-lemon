@@ -1,9 +1,11 @@
 import BookingForm from "./reservation/BookingForm";
 import { useReducer } from "react";
 import './Reservation.css';
+import { fetchAPI } from "../utility/Utility";
 
 export const initializeTimes = () => {
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    const today = new Date();
+    return fetchAPI(today);
 };
 
 const availableTimesReducer = (state, action) => {
@@ -19,15 +21,7 @@ function Reservation(){
     const [state, dispatch] = useReducer(availableTimesReducer, { availableTimes: initializeTimes() });
 
     const updateTimes = (selectedDate) => {
-        let updatedTimes = [];
-
-        const dayOfWeek = new Date(selectedDate).getDay();
-
-        if (dayOfWeek === 0 || dayOfWeek === 6) {
-            updatedTimes = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
-        } else {
-            updatedTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-        }
+        let updatedTimes = fetchAPI(selectedDate);
         dispatch({ type: 'UPDATE_TIMES', payload: updatedTimes });
     };
 

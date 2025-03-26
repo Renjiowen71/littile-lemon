@@ -1,4 +1,5 @@
 .card-holder{
+    display: flex;
     padding-left: 0;
     padding-right: 0;
     flex-wrap: wrap;
@@ -141,6 +142,7 @@
     }
 
     .testi-card-body {
+        display: flex;
         justify-content: flex-start;
         gap:10px;
     }

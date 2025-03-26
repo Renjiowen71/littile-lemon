@@ -33,6 +33,7 @@ section.specials{
   justify-content: space-between;
 
   .section-header{
+    display: flex;
     padding-left:0;
     padding-right:0;
     width: 100%;

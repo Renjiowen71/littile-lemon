@@ -1,12 +1,14 @@
 import{useState, useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
 import useSubmit from '../../../hooks/useSubmit';
 
 
 function BookingForm({availableTimes, updateTimes}){
+    const navigate = useNavigate();
     const {isLoading, response, submit} = useSubmit();
     const [formData, setFormData] = useState({
         date: "",
-        time: "",
+        time: availableTimes[0],
         guests: 1,
         occation: "Birthday"
     });
@@ -15,24 +17,16 @@ function BookingForm({availableTimes, updateTimes}){
         if (formData.date) {
             updateTimes(formData.date);
         }
-    }, [formData.date, updateTimes]);
+    }, [formData.date]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         submit("url", formData)
         .then(() => {
-            alert(response.type+", "+response.message)
-            if(response.type==="success"){
-                setFormData({
-                    date: "",
-                    time: "",
-                    guests: 1,
-                    occation: "Birthday"
-                });
-            }
+            navigate("/reservation/confirmed");
         })
-        .catch(() => {
-            alert(response.type+", "+response.message);
+        .catch((error) => {
+            alert("Error, "+error.message);
         });
     }
 
@@ -40,19 +34,21 @@ function BookingForm({availableTimes, updateTimes}){
         <form onSubmit={handleSubmit}>
         <fieldset>
             <section className="fieldDate">
-                <label htmlFor='date'>Choose date: </label>
+                <label htmlFor='date' className='h3-like'>Choose date: </label>
                 <input
                     id="date"
                     type="date"
+                    className='h3-like'
                     value={formData.date}
                     onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
                 />
             </section>
             <section className="fieldTime">
-                <label htmlFor='time'>Choose time: </label>
+                <label htmlFor='time' className='h3-like'>Choose time: </label>
                 <select
                     id="time"
                     value={formData.time}
+                    className='h3-like'
                     onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
                 >
                     {availableTimes.map((time) => (
@@ -63,19 +59,21 @@ function BookingForm({availableTimes, updateTimes}){
                 </select>
             </section>
             <section className="fieldGuest">
-                <label htmlFor='guests'>Number of guests: </label>
+                <label htmlFor='guests' className='h3-like'>Number of guests: </label>
                 <input
                     id="guests"
                     type="number"
                     min={1}
+                    className='h3-like'
                     value={formData.guests}
                     onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
                 />
             </section>
             <section className="fieldOccation">
-                <label htmlFor='occation'>Occation: </label>
+                <label htmlFor='occation' className='h3-like'>Occation: </label>
                 <select
                     id="occation"
+                    className='h3-like'
                     value={formData.occation}
                     onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
                 >
@@ -84,7 +82,7 @@ function BookingForm({availableTimes, updateTimes}){
                     <option>Other</option>
                 </select>
             </section>
-            <button disabled={!formData.date || !formData.time || isLoading} type="submit">Submit</button>
+            <button disabled={!formData.date || !formData.time || isLoading} type="submit" className='button'>Submit</button>
         </fieldset>
     </form>
     )

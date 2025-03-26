@@ -6,6 +6,7 @@ import Home from './components/page/Home';
 import Footer from './components/Footer';
 import Menu from './components/page/Menu';
 import Reservation from './components/page/Reservation';
+import ConfirmReservation from './components/page/ConfirmReservation';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function AppWithScroll() {
           <Route path="/" element={<Home />} />
           <Route path="/little-lemon" element={<Home />} />
           <Route path="/menu" element={<Menu/>} />
+          <Route path="/reservation/confirmed" element={<ConfirmReservation />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>

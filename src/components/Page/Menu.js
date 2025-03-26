@@ -6,7 +6,7 @@ function Menu(){
         <>
             <section className="specials">
                 <section className="section-header">
-                    <h2>This Week Specials!!!</h2>
+                    <h1>This Week Specials!!!</h1>
                 </section>
                 <Carousel/>
             </section>
