@@ -4,7 +4,7 @@ function ConfirmReservation(){
     return (
         <section>
             <section style={{display: "block"}}>
-                <h3>Reservation is confirmed, We will email you shortly</h3>
+                <h3>Reservation is confirmed, see you soon!</h3>
                 <Link to="/" className='button'>Home</Link>
             </section>
         </section>
