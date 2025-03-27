@@ -4,6 +4,7 @@
   justify-items: center;
   min-width: 60%;
   padding: 25px 20%;
+  overflow: hidden;
 }
 
 .container > section:nth-child(odd) {

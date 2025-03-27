@@ -1,14 +1,23 @@
-import Carousel from "./menu/Carousel"
 import './Menu.css';
+import DesertsMenu from './menu/DesertsMenu';
+import MainsMenu from './menu/MainsMenu';
+import SpecialsMenu from "./menu/SpecialsMenu";
+import StartersMenu from './menu/StartersMenu';
 
 function Menu(){
     return(
         <>
             <section className="specials">
-                <section className="section-header">
-                    <h1>This Week Specials!!!</h1>
-                </section>
-                <Carousel/>
+                <SpecialsMenu/>
+            </section>
+            <section className="specials">
+                <MainsMenu/>
+            </section>
+            <section className="specials">
+                <StartersMenu/>
+            </section>
+            <section className="specials">
+                <DesertsMenu/>
             </section>
         </>
     )

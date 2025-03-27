@@ -52,6 +52,31 @@ async function Fetch(url){
             name: "Lemon Dessert3",
             desc: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
             price: 5.00
+        }
+    ];
+    if(url==="specialsMenuUrl") return specialsMenuData;
+
+    const startersMenuData = [
+        {
+            id: 1,
+            img: salad,
+            name: "Greek Salad1",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        },
+        {
+            id: 2,
+            img: bruchetta,
+            name: "Bruchetta2",
+            desc: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+            price: 5.99
+        },
+        {
+            id: 3,
+            img: lemon,
+            name: "Lemon Dessert3",
+            desc: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+            price: 5.00
         },
         {
             id: 4,
@@ -68,7 +93,107 @@ async function Fetch(url){
             price: 12.99
         }
     ];
-    if(url==="specialsMenuUrl") return specialsMenuData;
+    if(url==="startersMenuUrl") return startersMenuData;
+
+    const mainsMenuData = [
+        {
+            id: 1,
+            img: salad,
+            name: "Greek Salad1",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        },
+        {
+            id: 2,
+            img: bruchetta,
+            name: "Bruchetta2",
+            desc: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+            price: 5.99
+        },
+        {
+            id: 3,
+            img: lemon,
+            name: "Lemon Dessert3",
+            desc: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+            price: 5.00
+        },
+        {
+            id: 4,
+            img: bruchetta,
+            name: "Bruchetta4",
+            desc: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+            price: 5.99
+        },
+        {
+            id: 5,
+            img: salad,
+            name: "Greek Salad5",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        },
+        {
+            id: 6,
+            img: salad,
+            name: "Greek Salad6",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        },
+        {
+            id: 7,
+            img: salad,
+            name: "Greek Salad7",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        }
+    ];
+    if(url==="mainsMenuUrl") return mainsMenuData;
+
+    const desertsMenuData = [
+        {
+            id: 1,
+            img: salad,
+            name: "Greek Salad1",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        },
+        {
+            id: 2,
+            img: bruchetta,
+            name: "Bruchetta2",
+            desc: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+            price: 5.99
+        },
+        {
+            id: 3,
+            img: lemon,
+            name: "Lemon Dessert3",
+            desc: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+            price: 5.00
+        },
+        {
+            id: 4,
+            img: bruchetta,
+            name: "Bruchetta4",
+            desc: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+            price: 5.99
+        },
+        {
+            id: 5,
+            img: salad,
+            name: "Greek Salad5",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        },
+        {
+            id: 6,
+            img: salad,
+            name: "Greek Salad6",
+            desc: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+            price: 12.99
+        }
+    ];
+    if(url==="desertsMenuUrl") return desertsMenuData;
+
     const testimonialsData = [
         {
             id: 1,

@@ -2,8 +2,16 @@ import { Link } from "react-router-dom";
 import delivery from '../../assets/delivery.png';
 import './Card.css';
 function SpecialsCard(props){
+    const handleClick = (e) => {
+        if (props.disabled) {
+          e.preventDefault();
+        }
+    };
+
     return(
-        <Link to="/order" className="card" style={props.style}>
+        <Link to="/order" onClick={handleClick} className="card" style={{
+            pointerEvents: props.disabled ? 'none' : 'auto',
+            ...props.style}}>
             <aside>
                 <img src={props.item.img} alt="Food"/>
             </aside>
