@@ -40,8 +40,8 @@ function Carousel() {
                 const offsetSpace = 28;
                 var offset = (index - startIndex) * offsetSpace;
 
-                const opacity = offset < 0 ? 0 : offset>80? (offset-80)/20 : 1;
-                const left = offset;
+                const opacity = offset < 0 ? 0.5 : offset>80? 0.5 : 1;
+                const left = offset+8;
 
                 const transitionStyle = {
                     left: `${left}%`,
