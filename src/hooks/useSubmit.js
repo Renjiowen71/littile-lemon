@@ -10,11 +10,14 @@ const useSubmit = () => {
     const random = Math.random();
     setLoading(true);
     try {
-      await wait(2000);
-      setResponse({
-        type: 'success',
-        message: `Thanks for your submission, we will get back to you shortly!`,
-      })
+      await wait(1000);
+      // if(random>0.3)
+        setResponse({
+          type: 'success',
+          message: `Thanks for your submission, we will get back to you shortly!`,
+        })
+      // else
+      //   throw "Error, Please Try Again"
     } catch (error) {
       setResponse({
         type: 'error',

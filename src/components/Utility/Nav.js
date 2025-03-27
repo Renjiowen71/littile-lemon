@@ -1,4 +1,3 @@
-import navMenu from '../../assets/hamburger menu.png'
 import { Link } from "react-router-dom";
 
 function Nav() {

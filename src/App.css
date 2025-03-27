@@ -39,6 +39,7 @@ h3, .h3-like{
   color: var(--secondary-colorBlack);
   text-decoration: none;
   border-radius: 5px;
+  border-style: none;
   font-family: 'Karla';
   font-size: 18px;
   text-align: center;
@@ -49,6 +50,11 @@ h3, .h3-like{
 .button:hover{
   background-color: var(--secondary-colorCream);
   transform: scale(1.05);
+}
+
+.button:disabled{
+  border-style: dotted;
+  background-color:  var(--primary-colorGreen);
 }
 
 
@@ -64,6 +70,7 @@ header {
 
   nav{
     height: 15px;
+    transition: top 0.2s height 0.2s;
   }
   .nav-toggle{
     display: none;
@@ -74,12 +81,10 @@ header {
     width: 180px;
     height: 'auto';
     object-fit: 'contain';
-    transition: width 0.5s ease-out,
   }
 
   img.nav-menu{
     width: 30px;
-    transition: width 0.5s ease-out,
   }
 
   .navbar {
@@ -136,12 +141,11 @@ header {
       width: 100%;
       height: 0px;
       overflow: hidden;
-      top: 0;
+      top: -10px;
       left: 0;
       background-color: var(--secondary-colorWhite);
       padding-left: 20px;
-      padding-top: 20px;
-      transition: height 0.3s;
+      padding-top: 40px;
     }
 
     .navbar {
@@ -150,7 +154,6 @@ header {
 
     nav.open {
       height: 350px;
-      padding-top: 20px;
     }
 
     .nav-toggle {
@@ -169,7 +172,9 @@ header {
 
 footer{
   display: flex;
-  padding: 25px 20%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20%;
   gap: 3%;
   flex-wrap: wrap;
   background-color: var(--primary-colorGreen);

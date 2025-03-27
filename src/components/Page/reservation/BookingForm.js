@@ -1,55 +1,71 @@
 import{useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import useSubmit from '../../../hooks/useSubmit';
+import { useFormik } from "formik";
+import * as Yup from 'yup';
 
 
 function BookingForm({availableTimes, updateTimes}){
+    const today = new Date().toISOString().split('T')[0];
     const navigate = useNavigate();
-    const {isLoading, response, submit} = useSubmit();
-    const [formData, setFormData] = useState({
-        date: "",
-        time: availableTimes[0],
-        guests: 1,
-        occation: "Birthday"
+    const {isLoading, submit} = useSubmit();
+    const [error, setError] = useState(null)
+
+    const formik = useFormik({
+        initialValues: {
+            date: "",
+            time: availableTimes[0],
+            guests: 1,
+            occation: "Birthday"
+        },
+        onSubmit: (values) => {
+          submit("url", values)
+            .then(() => {
+                navigate("/reservation/confirmed");
+                formik.resetForm();
+            })
+            .catch((error) => {
+                setError(error)
+            });
+        },
+        validationSchema: Yup.object({
+            date: Yup.date()
+                .required("Date is required"),
+            guests: Yup.number()
+                .required("Number of Guests is required"),
+        }),
     });
 
     useEffect(() => {
-        if (formData.date) {
-            updateTimes(formData.date);
+        if (formik.values.date) {
+            updateTimes(formik.values.date);
         }
-    }, [formData.date]);
+    }, [formik.values.date, updateTimes]);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        submit("url", formData)
-        .then(() => {
-            navigate("/reservation/confirmed");
-        })
-        .catch((error) => {
-            alert("Error, "+error.message);
-        });
-    }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={formik.handleSubmit}>
         <fieldset>
-            <section className="fieldDate">
+            <section className="field-date">
                 <label htmlFor='date' className='h3-like'>Choose date: </label>
                 <input
                     id="date"
-                    type="date"
-                    className='h3-like'
-                    value={formData.date}
-                    onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
+                    data-testid="date"
+                    name='date'
+                    type='date'
+                    min={today}
+                    className={`h3-like ${formik.errors.date && formik.touched.date ? 'invalid' : ''}`}
+                    {...formik.getFieldProps("date")}
                 />
             </section>
-            <section className="fieldTime">
+            <section className="field-time">
                 <label htmlFor='time' className='h3-like'>Choose time: </label>
                 <select
                     id="time"
-                    value={formData.time}
+                    name="time"
                     className='h3-like'
-                    onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
+                    aria-label="Time selection"
+                    {...formik.getFieldProps("time")}
                 >
                     {availableTimes.map((time) => (
                         <option key={time} value={time}>
@@ -58,31 +74,42 @@ function BookingForm({availableTimes, updateTimes}){
                     ))}
                 </select>
             </section>
-            <section className="fieldGuest">
+            <section className="field-guest">
                 <label htmlFor='guests' className='h3-like'>Number of guests: </label>
                 <input
                     id="guests"
-                    type="number"
-                    min={1}
+                    name="guests"
+                    type='number'
                     className='h3-like'
-                    value={formData.guests}
-                    onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
+                    aria-label="Number of guests"
+                    {...formik.getFieldProps("guests")}
                 />
             </section>
-            <section className="fieldOccation">
+            <section className="field-occation">
                 <label htmlFor='occation' className='h3-like'>Occation: </label>
                 <select
                     id="occation"
+                    name='occation'
                     className='h3-like'
-                    value={formData.occation}
-                    onChange={e => setFormData({...formData, [e.target.id]: e.target.value})}
+                    {...formik.getFieldProps("occation")}
+                    aria-label="Occation selection"
                 >
                     <option>Birthday</option>
                     <option>Anniversary</option>
                     <option>Other</option>
                 </select>
             </section>
-            <button disabled={!formData.date || !formData.time || isLoading} type="submit" className='button'>Submit</button>
+            {error && (
+                <section className='field-error'>
+                    <label className='error'>{error}</label>
+                </section>
+            )}
+            <button
+                className='button'
+                disabled={!(formik.isValid) || isLoading}
+                type="submit"
+                aria-label="Submit reservation form"
+                >Submit</button>
         </fieldset>
     </form>
     )

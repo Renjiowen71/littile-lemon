@@ -28,10 +28,10 @@ function Carousel() {
   return (
     <div className="carousel-container">
         {items.length > 3 && (
-                <button className="carousel-button left" onClick={prevItems}>
-                {'<'}
-                {/* &#8592; */}
-            </button>
+          <button className="carousel-button left" onClick={prevItems}>
+            {'<'}
+            {/* &#8592; */}
+          </button>
         )}
 
         <div className="carousel">
@@ -40,7 +40,7 @@ function Carousel() {
                 const offsetSpace = 28;
                 var offset = (index - startIndex) * offsetSpace;
 
-                const opacity = offset < 0 ? 0 : offset>80? 0 : 1;
+                const opacity = offset < 0 ? 0 : offset>80? (offset-80)/20 : 1;
                 const left = offset;
 
                 const transitionStyle = {
@@ -57,11 +57,12 @@ function Carousel() {
             })}
             </div>
         </div>
-
-        <button className="carousel-button right" onClick={nextItems}>
-            {'>'}
-            {/* &#8594; */}
-        </button>
+        {items.length > 3 && (
+          <button className="carousel-button right" onClick={nextItems}>
+              {'>'}
+              {/* &#8594; */}
+          </button>
+        )}
     </div>
   );
 }

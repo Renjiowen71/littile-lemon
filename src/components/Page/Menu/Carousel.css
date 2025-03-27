@@ -3,7 +3,6 @@
     min-height: 500px;
     margin: 0 auto;
     overflow: hidden;
-    padding-left: 10%;
 }
 
 .carousel {
@@ -43,11 +42,11 @@
 }
 
 .carousel-button.left {
-    left: 55px;
+    left: 0px;
 }
 
 .carousel-button.right {
-    right: 90px;
+    right: 129px;
 }
 
 .carousel-button:hover{
