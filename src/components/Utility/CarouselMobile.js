@@ -57,6 +57,9 @@ function CarouselMobile({items}) {
       onMouseMove={handlePause}
       onMouseLeave={handleResume}
       onMouseDown={handleInteract}
+      onTouchStart={handlePause}
+      onTouchMove={handleInteract}
+      onTouchEnd={handleResume}
     >
       {items.map((item, index) => {
           return (
