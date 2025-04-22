@@ -1,4 +1,4 @@
-import Carousel from "./Carousel"
+import Carousel from "../../utility/Carousel"
 import Fetch from "../../utility/Fetch";
 import {useState,useEffect} from 'react';
 function StartersMenu(){

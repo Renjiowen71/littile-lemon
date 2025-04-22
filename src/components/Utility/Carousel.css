@@ -67,4 +67,35 @@
     }
 }
 
+.carousel-mobile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    height: 500px;
+}
+
+.carousel-mobile-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.carousel-mobile-container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+}
+
+.carousel-mobile-container::-webkit-scrollbar-thumb {
+    background: var(--primary-colorYellow);
+    border-radius: 20px;
+}
+
+.carousel-mobile-container::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-colorCream);
+}
+
+.carousel-mobile-container {
+    scrollbar-width: 20px;
+    scrollbar-color: var(--primary-colorYellow) transparent;
+}
+
 

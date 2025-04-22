@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Fetch from '../utility/Fetch'; // Assuming Fetch is the fetch utility
-import SpecialsCard from "./SpecialsCard";
 import "./Card.css";
+import Carousel from '../utility/Carousel';
 
 function SpecialsCardHolder() {
     const [items, setItems] = useState([]);
@@ -15,11 +15,7 @@ function SpecialsCardHolder() {
     }, []);
 
     return (
-        <section className="card-holder" >
-            {items.map(item => (
-                <SpecialsCard key={item.id} item={item} />
-            ))}
-        </section>
+        <Carousel items={items}/>
     );
 }
 

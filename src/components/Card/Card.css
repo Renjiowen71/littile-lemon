@@ -8,6 +8,15 @@
 }
 
 
+@media (max-width: 800px) {
+    .card-holder{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 .card {
     margin: 5px;
     background-color: var(--secondary-colorWhite);

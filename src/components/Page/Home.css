@@ -36,6 +36,7 @@ section.specials{
     display: flex;
     padding-left:0;
     padding-right:0;
+    padding-bottom: 20px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -43,8 +44,8 @@ section.specials{
 }
 
 section.testimonials{
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 
   .section-header{
     justify-content: center;
@@ -105,6 +106,28 @@ section.about{
       box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
       top: -40px;
       left: 160px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  section.about{
+    flex-direction: column;
+  }
+
+  section.specials{
+    .section-header{
+      justify-content: center;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  section.hero{
+    flex-direction: column;
+    img{
+      width: 100%;
+      margin-top: 30px;
     }
   }
 }
