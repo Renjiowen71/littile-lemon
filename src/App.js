@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import Menu from './components/page/Menu';
 import Reservation from './components/page/Reservation';
 import ConfirmReservation from './components/page/ConfirmReservation';
+import Login from './components/page/Login';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return (
@@ -31,7 +33,7 @@ function AppWithScroll() {
   }, [location]);
 
   return (
-    <>
+    <UserProvider>
       <Header />
       <main className="container">
         <Routes>
@@ -40,11 +42,12 @@ function AppWithScroll() {
           <Route path="/menu" element={<Menu/>} />
           <Route path="/reservation/confirmed" element={<ConfirmReservation />} />
           <Route path="/reservation" element={<Reservation />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>
       </main>
       <Footer />
-    </>
+    </UserProvider>
   );
 }
 

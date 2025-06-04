@@ -1,6 +1,6 @@
 import BookingForm from "./reservation/BookingForm";
 import { useReducer } from "react";
-import './Reservation.css';
+import './Form.css';
 import { fetchAPI } from "../utility/Utility";
 
 export const initializeTimes = () => {
@@ -27,7 +27,7 @@ function Reservation(){
 
     return (
         <>
-            <section className="reservation">
+            <section className="form">
                 <h1>Book Now!</h1>
                 <BookingForm
                     availableTimes={state.availableTimes}
